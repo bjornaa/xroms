@@ -6,7 +6,7 @@ import pytest
 
 @pytest.fixture
 def ds():
-    """Make an idealized ROMS-like test dataset"""
+    """Make an minimal ROMS-like test dataset"""
     imax, jmax, kmax = 8, 6, 4
     xx, yy = np.meshgrid(np.arange(imax), np.arange(jmax))
     H = yy + 100

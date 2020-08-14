@@ -2,8 +2,6 @@ import numpy as np
 import xarray as xr
 from xgcm import Grid
 
-# import xroms
-
 
 def section(ds, X, Y):
     """Create a ROMS section Dataset with xgcm grid

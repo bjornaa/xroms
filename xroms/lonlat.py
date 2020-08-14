@@ -2,6 +2,7 @@ import numpy as np
 from scipy.interpolate import griddata
 import xarray as xr
 
+"""Tools for conversion between grid coordinates and longitude/latitude"""
 
 def xy2ll(A, x, y):
     """Convert from grid coordinates to longitude/latitude"""
@@ -19,7 +20,10 @@ def xy2ll(A, x, y):
 
     return lon, lat
 
+
 def ll2xy(A, lon, lat):
+    """Convert from longitude/latitude to grid coordinates"""
+
     gLon = A["lon_rho"].data.ravel()
     gLat = A["lat_rho"].data.ravel()
     X0 = A["xi_rho"].data
